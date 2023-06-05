@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // let name ='노길똥';
+    // let age= 23;
+
+    // // let person ={
+    // //   name:name,
+    // //   age:age
+    // // }
+
+    // let person ={name,age};
+    // // 키값과 변수 이름이 같다면 줄일 수 있다.
+    // console.log(person)
+
+
+    // let person2={nameValue:name, ageValue:age};// 키값과 변수 이름이 다르면 줄일 수 없다.
+    // console.log(person2.nameValue) //노길똥
+
+    //객체를 분해하는 과정
+    // let 우리반여학생1 = {
+    //   name:'고민정',
+    //   age:20
+    // }
+
+    // 객체를 변수로 분리하고자 할때.
+    // let name = 우리반여학생1.name;
+    // let age = 우리반여학생1.age;
+
+    // 위에 두줄과 아래줄은 동일
+    // let {name,age}=우리반여학생1
+    // console.log(name,age)
+
+    // let nameDiff = 우리반여학생1.name;
+    // let ageDiff = 우리반여학생1.age;
+
+    // let {nameDiff1,ageDiff2}=[우리반여학생1.name, 우리반여학생1.age]
+    // console.log(nameDiff1,ageDiff2)
+
+    // //배열을 변수에 담기(구조분해문법)
+    // let array=[1,2,3];
+    // // let one=array[0]
+    // // let two=array[1]
+    // // let three=array[2]
+    // //위 3줄과 동일
+    // let [one,two,three]=array;
+    // console.log(one,two,three)
+
+    // let [a,...rest]=array;
+    // //
+    // console.log(a,rest)
+    // let [...rest2]=array;
+    // console.log(rest2)
+
+    // let [...abe]=array;
+    // console.log(abe)
+
+    let 사람={
+      name:'노삼두',
+      age:"응애",
+      run:false
+    }
+    // let {name,age,run}=사람;
+    // let {name:name,age:age,run:run}=사람;
+    let {name,...rest3}=사람;
+    console.log(name,rest3)
+    // 이름은 변수 nm으로 받고, 나머지 객체는 묶인다.
+
+    let aa =[1,2];
+    let bb = [3,4];
+    let cc = [5,6];
+
+    // let result = aa.concat(bb,cc)
+    // console.log(result)
+
+    let result2= [...aa,...bb,...cc]
+    console.log(result2)
+
+    //함수선언방식
+    // function foo(){
+    //   console.log('실행')
+    // };
+    let foo=()=>{
+      console.log('화살표실행')
+    }
+    foo();
+    ///////////
+
+    // let ft=function(){
+    //   return '리액트';
+    // }
+
+    // let ft=()=>{
+    //   return '리액트';
+    // }
+    let ft=()=>'리액트';
+    
+    let result3=ft()
+    console.log(result3)
+
+
+  </script>
+  
+</body>
+</html>

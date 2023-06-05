@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    // 객체: 관련된 정보를 묶어서 하나의 데이터로 저장을 하게 해준다. { 이름, 이름}
+    let patient = {
+      // key:key-value
+      name: '노길똥',
+      age: 17,
+      disease: 'cold'
+    }
+    console.log(patient)
+    console.log(patient.age) //17
+    console.log(patient['age']) //17
+    patient.name = "노말짜";
+    console.log(patient)
+    patient['age'] = 54;
+    console.log(patient.age)
+
+    let patientList = [{
+        name: '안놀부',
+        age: 13
+      },
+      {
+        name: '흥없부',
+        age: 12
+      },
+      {
+        name: '발없제비',
+        age: 30
+      }
+    ]
+    console.log(patientList)
+    console.log("두번째환자", patientList[1]) 
+    //,나 +나 같다.
+    console.log("두번째환자"+ patientList[1].name) 
+    console.log("두번째환자"+ patientList[1]["name"]) //위와 같다 
+    console.log("두번째환자의 나이"+ patientList[1].age)
+    console.log("두번째환자의 나이"+ patientList[1]["age"])
+
+
+    // 배열
+    let 남학생1 = '로동상재';
+    let 남학생2 = '허령규';
+    let 남학생3 = '호준서';
+    let 남학생4 = '김일성';
+    let 남학생5 = '김정일';
+
+    let 우리반남학생 = ['로동상재','허령규','호준서','김일성','김정일'];
+
+    console.log(우리반남학생)
+    console.log(우리반남학생[0])
+    console.log(우리반남학생[1])
+    console.log(우리반남학생[3])
+    
+    우리반남학생[3] = '태양';
+    console.log(우리반남학생[3])
+
+    // 배열과 함께 쓰는 함수
+    우리반남학생.pop(); // 마지막요소를 빼낸다.
+    console.log(우리반남학생)
+
+    우리반남학생.push('지드래곤'); // 마지막에 집어넣는다.
+    console.log(우리반남학생.includes('호준서')) // 안에 괄호안의 것이 있는지 물어본다. true와 false로 반환해준다.
+    //.includes():해당 아이템을 배열이 포함하고 있는지 알려줌(true,false)
+
+    console.log(우리반남학생.indexOf('호준서')) // 인덱스번호 2번이라고 찍어준다.
+
+    console.log(우리반남학생.slice(3))
+    //.slice(시작점) ==> 3번 이후로 보여준다.
+
+    console.log(우리반남학생.slice(1,3))
+    //.slice(1,3) ==> 1번이상 3번미만
+
+    console.log(우리반남학생) //['로동상재', '허령규', '호준서', '태양', '지드래곤'] 
+    //슬라이스로 원 배열에 영향을 주지는 않는다
+
+    console.log(우리반남학생.splice(3,2)) //3번부터 2개를 잘라낸다. --> 배열자체를 손상시켜버린다.
+    console.log(우리반남학생)
+
+
+
+  </script>
+</body>
+
+</html>
